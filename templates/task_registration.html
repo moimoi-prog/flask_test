@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>作業登録</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="{{ url_for('registration') }}" method=post>
+    <dl>
+      <dt>作業名称:
+      <dd><input type=text name=name>
+      <dd><input type=submit value=Registration>
+    </dl>
+  </form>
+{% endblock %}
